@@ -1,0 +1,19 @@
+{
+	"dockerComposeFile": "./docker-compose.yml", // docker-compose file
+	"service": "jupyter", // service name in docker-compose file
+	"workspaceFolder": "/home/jovyan/work", // root directory of the project
+	"forwardPorts": [8888],
+	"remoteUser": "jovyan", // default user, as the same in the Dockerfile
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/opt/conda/bin/python" // python interpreter path
+			},
+			"extensions": [ // vscode extensions
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter"
+			]
+		}
+	}
+}
